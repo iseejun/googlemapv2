@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ecitz.googlemap.MainActivity$PlaceholderFragment" >
+
+    <AutoCompleteTextView
+        android:id="@+id/txtStartPoint"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5.0dip"
+        android:hint="starting point"
+        android:singleLine="true" />
+
+    <AutoCompleteTextView
+        android:id="@+id/txtEndPoint"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@id/txtStartPoint"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5.0dip"
+        android:hint="terminal point"
+        android:singleLine="true" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/groupMode"
+        android:layout_below="@id/txtEndPoint" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:checked="true"
+            android:text="driving" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="transit" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="walking" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@id/groupMode"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5.0dip"
+        android:text="search" />
+
+</RelativeLayout>
